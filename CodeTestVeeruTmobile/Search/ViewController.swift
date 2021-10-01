@@ -91,8 +91,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserSearchViewCell", for:indexPath) as! UserSearchViewCell
-        if let ostfdfd = self.userDetailsLists, indexPath.row <= ostfdfd.count {
-            let model = ostfdfd[indexPath.row]
+        if let userDetails = self.userDetailsLists, indexPath.row <= userDetails.count {
+            let model = userDetails[indexPath.row]
             cell.setup(model: model)
         }
         cell.tag = indexPath.row
